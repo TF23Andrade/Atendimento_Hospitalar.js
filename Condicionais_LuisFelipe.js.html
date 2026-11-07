@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiveCode Export</title>
+<style>
+
+</style>
+</head>
+<body>
+<h1>Hello World!</h1>
+<script>
+const Corpulseira = "Verde";
+const Idadedopaciente = 12;
+const Gestante = false;
+
+if (Corpulseira == "Vermelha"){
+  
+  console.log("Atendimento de Emergência: Sala de trauma imediata")
+} else if (Corpulseira == "Amarela") {
+  
+  if (Idadedopaciente >= 60 || Gestante == true){
+  
+  console.log("Atendimento Urgente: Prioridade Especial Preferencial")
+  
+} else{
+  
+  console.log("Atendimento Urgente: Fila padrão amarela")
+}
+  
+ 
+} else if (Corpulseira == "Verde") {
+  
+  let encaminhamento = Idadedopaciente < 12
+  
+  ? "Encaminhar para Pediatria"
+    : "Encaminhar para Clínica Geral";
+  console.log(encaminhamento);
+  
+} else{
+  
+  console.log("Indique a cor da pulseira para dar procedimento ao atendimento")
+}
+
+</script>
+</body>
+</html>
